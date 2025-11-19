@@ -2,7 +2,7 @@
 
 This is a guide for contributing to all of my projects.
 
-## Wasting Code, Accepting Patches, and Ego
+## Social Human Emotional Stuff
 
 - Before embarking on a large scale change, especially any change
   that significantly changes architecture or requires user code
@@ -23,6 +23,11 @@ This is a guide for contributing to all of my projects.
   non-native English speakers. Do not take code review
   personally. If I'm harsh in my criticism, it's because I
   respect you as a developer.
+- Any demands, pleading, or otherwise implying that I or any
+  other open source maintainer _owes_ you something, by virtue of
+  having given away our time and labor, will be shut down
+  immediately. Your dependence is not my emergency. If you need
+  something done quickly, be prepared to pay market rates for it.
 
 ## More Practical Stuff
 
