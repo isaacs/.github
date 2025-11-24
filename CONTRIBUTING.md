@@ -49,6 +49,18 @@ This is a guide for contributing to all of my projects.
   English, then it's more challenging for me to maintain the
   project.
 
+## AI
+
+While you are of course free to use whichever tools you find
+helpful,  **I am not interested in code contributions that were
+written by AI systems**, unless _you personally_ can demonstrate
+deep understanding of what is going on.
+
+Large low-effort PRs authored by LLMs (or otherwise automatically
+machine-generated) will be dismissed, rudely if necessary.
+
+## Legal Stuff
+
 By contributing to my project, you assert that you are legally
 entitled to make that code part of the projet, and that it is not
 (to the best of your knowledge) encumbered by any legal
