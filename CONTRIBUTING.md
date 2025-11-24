@@ -4,6 +4,9 @@ This is a guide for contributing to all of my projects.
 
 ## Social Human Emotional Stuff
 
+Note: there's some overlap between this and the [code of
+conduct](https://github.com/isaacs/.github/blob/main/CODE_OF_CONDUCT.md).
+
 - Before embarking on a large scale change, especially any change
   that significantly changes architecture or requires user code
   changes (SemVer major/breaking changes), I'd encourage you to
