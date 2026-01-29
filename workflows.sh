@@ -22,7 +22,7 @@ fi
 
 # remove prettier configs from package.json, standard indentation
 node -e '
-import { readFileSync, writeFileSync } from "node:fs"
+const { readFileSync, writeFileSync } = require("node:fs")
 const { prettier, ...pkg } = JSON.parse(readFileSync("package.json"))
 if (typeof pkg.tap === "object") {
   writeFileSync(".taprc", JSON.stringify(pkg.tap, null, 2) + "\n")
@@ -43,7 +43,7 @@ ACTION_UPLOAD_PAGES_ARTIFACT=actions/upload-pages-artifact@v4
 ACTION_DEPLOY_PAGES=actions/deploy-pages@v4
 
 rm -rf .github/workflows
-mkdir .github/workflows
+mkdir -p .github/workflows
 
 cat > .github/workflows/typedoc.yml <(
   cat "$DOTDIR/typedoc.yml" \
