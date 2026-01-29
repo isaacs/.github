@@ -35,8 +35,11 @@ conduct](https://github.com/isaacs/.github/blob/main/CODE_OF_CONDUCT.md).
 ## More Practical Stuff
 
 - Except in _very_ rare cases, every patch must have a test, and
-  the test must fail without the patch.
-- Test coverage must remain at 100%, if it is there already.
+  the test must fail without the patch. (This does not apply to
+  patches that are not a functional change, such as most
+  documentation fixes, etc.)
+- Test coverage must remain at 100%, if it is there already. If
+  it is not, then it must not decrease.
 - I do not accept pull requests that change `package.json` or
   `package-lock.json`. If you think that a dependency needs to be
   updated, then post an issue about it, _not_ a pull request. It
@@ -55,7 +58,7 @@ conduct](https://github.com/isaacs/.github/blob/main/CODE_OF_CONDUCT.md).
 ## AI
 
 While you are of course free to use whichever tools you find
-helpful,  **I am not interested in code contributions that were
+helpful, **I am not interested in code contributions that were
 written by AI systems**, unless _you personally_ can demonstrate
 deep understanding of what is going on.
 
