@@ -11,6 +11,13 @@ very new and has not diverged much from the prior major version
 branch, security fixes _may_ be backported. But this is not the
 norm.
 
+**It is not my responsibility to backport fixes. It is _your_
+responsibility to stay up to date.**
+
+If you are using unsupported versions of libraries in a
+security-sensitive application, then you are exposing yourself
+and your users to risks that I cannot help prevent.
+
 ## Report Vulnerabilities via GitHub Security Advisories
 
 Please report all security vulnerabilities through 
