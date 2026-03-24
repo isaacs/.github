@@ -20,20 +20,61 @@ if ! [ "$remote" = "" ]; then
   )
 fi
 
+HAS_BUILD=$([ -f scripts/build.sh ] && echo 1 || echo 0)
+
 # remove prettier configs from package.json, standard indentation
 node -e '
-const { readFileSync, writeFileSync } = require("node:fs")
+HAS_BUILD = process.argv[1] === "1"
+const { statSync, readFileSync, writeFileSync } = require("node:fs")
 const { prettier, ...pkg } = JSON.parse(readFileSync("package.json"))
 if (typeof pkg.tap === "object") {
   writeFileSync(".taprc", JSON.stringify(pkg.tap, null, 2) + "\n")
   delete pkg.tap
 }
+
+pkg.scripts ??= {}
+pkg.scripts.test ??= "tap"
+pkg.scripts.snap ??= "tap"
+try {
+  statSync("scripts/build.sh")
+  pkg.scripts.prepare ??= "tshy && bash scripts/build.sh"
+} catch {
+  pkg.scripts.prepare ??= "tshy"
+}
+pkg.scripts.typedoc ??= "typedoc"
+pkg.scripts.prepublishOnly ??= "git push origin --follow-tags"
+pkg.scripts.pretest ??= "npm run prepare"
+pkg.scripts.presnap ??= "npm run prepare"
+pkg.scripts.lint ??= "oxlint --fix src test"
+pkg.scripts.format ??= "prettier --write ."
+pkg.scripts.postsnap ??= "npm run lint"
+pkg.scripts.postlint ??= "npm run format"
+
 writeFileSync("package.json", JSON.stringify(pkg, null, 2) + "\n")
-'
+' "$HAS_BUILD"
 
 cp "$DOTDIR/.prettierignore" .
 cp "$DOTDIR/.prettierrc.json" .
+cp "$DOTDIR/.oxlintrc.json" .
 
+PKGS=(
+  "typedoc@latest"
+  "tap@latest"
+  "prettier@latest"
+  "oxlint@latest"
+  "oxlint-tsgolint@latest"
+  "tshy@latest"
+  "@types/node@latest"
+)
+
+if [ "$HAS_BUILD" -eq 1 ]; then
+  if [ "$(cat scripts/build.sh)" = "" ]; then
+    cp "$DOTDIR/build.sh" ./scripts
+  fi
+  PKGS+=("esbuild@latest")
+fi
+
+npm i -D "${PKGS[@]}"
 
 NODE_VERSION="22.x, 24.x, 25.x"
 ACTION_SETUP_NODE=actions/setup-node@v6
