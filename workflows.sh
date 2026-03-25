@@ -50,6 +50,16 @@ pkg.scripts.format ??= "prettier --write ."
 pkg.scripts.postsnap ??= "npm run lint"
 pkg.scripts.postlint ??= "npm run format"
 
+pkg.tshy ??= {
+  selfLink: false,
+  compiler: "tsgo",
+  exports: {
+    ".": "./src/index.ts",
+    "./package.json": "./package.json",
+  },
+}
+pkg.tshy.selfLink = false
+
 writeFileSync("package.json", JSON.stringify(pkg, null, 2) + "\n")
 ' "$HAS_BUILD"
 
