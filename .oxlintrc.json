@@ -41,16 +41,7 @@
         "allowImplicit": true
       }
     ],
-    "quotes": [
-      "error",
-      "single",
-      {
-        "avoidEscape": true
-      }
-    ],
-    "no-return-await": "error",
     "import/namespace": "off",
-    "import/no-unresolved": "off",
     "no-control-regex": "off",
     "jsdoc/check-tag-names": "off",
     "jsdoc/require-yields": "off",
