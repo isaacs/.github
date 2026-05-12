@@ -86,7 +86,7 @@ fi
 
 npm i -D "${PKGS[@]}"
 
-NODE_VERSION="22.x, 24.x, 25.x"
+NODE_VERSION="22.x, 24.x, 26.x"
 ACTION_SETUP_NODE=actions/setup-node@v6
 ACTION_CHECKOUT=actions/checkout@v6
 ACTION_CONFIGURE_PAGES=actions/configure-pages@v5
