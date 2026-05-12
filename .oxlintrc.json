@@ -138,12 +138,6 @@
       }
     },
     {
-      "files": ["*.tsx"],
-      "rules": {
-        "jsdoc/require-jsdoc": "off"
-      }
-    },
-    {
       "files": [
         "*.config.js",
         "*.config.mjs",
