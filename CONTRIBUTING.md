@@ -78,8 +78,8 @@ get flooded, I will shut down GitHub contributions on that repo.
 ## Legal Stuff
 
 By contributing to my project, you assert that you are legally
-entitled to make that code part of the projet, and that it is not
-(to the best of your knowledge) encumbered by any legal
+entitled to make that code part of the project, and that it is
+not (to the best of your knowledge) encumbered by any legal
 instrument or other reason why you would not be allowed to share
 it, and that you understand that the code you have contributed
 will be distributed under the same or similar license in the
