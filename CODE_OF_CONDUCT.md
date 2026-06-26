@@ -4,7 +4,7 @@ This document exists to help you understand the social rules of
 conduct that I hold myself to, and expect from others who
 interact with my projects.
 
-## An Peaceful Anarchy of Dictatorships
+## A Peaceful Anarchy of Dictatorships
 
 Projects of an individual are not democracies. They are the
 result of a single person's effort, and that maintainer has the
