@@ -2,6 +2,15 @@
 
 This is a guide for contributing to all of my projects.
 
+## Hey! Why were issues and PRs shut down on {repo}?
+
+Chances are, the repo wasn't pushed to for the last 4 years,
+and/or it was getting spammed with low-value, low-effort noise
+from LLM agents.
+
+If you want to contribute, send me a patch some other way. The
+internet provides you with numerous ways to get in touch with me.
+
 ## Social Human Emotional Stuff
 
 Note: there's some overlap between this and the [code of
@@ -63,7 +72,8 @@ written by AI systems**, unless _you personally_ can demonstrate
 deep understanding of what is going on.
 
 Large low-effort PRs authored by LLMs (or otherwise automatically
-machine-generated) will be dismissed, rudely if necessary.
+machine-generated) will be dismissed, rudely if necessary. If I
+get flooded, I will shut down GitHub contributions on that repo.
 
 ## Legal Stuff
 
@@ -76,5 +86,6 @@ will be distributed under the same or similar license in the
 future, at my discretion.
 
 If you do not or cannot agree to this, then please do not
-contribute. Instead, feel free to fork this project and make your
-changes in your own copy, insofar as the license allows.
+contribute. Feel free to fork this project and make your changes
+in your own copy, insofar as the license allows, and use that
+instead.
